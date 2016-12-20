@@ -1,48 +1,59 @@
 ﻿  Source.cpp
 c:\users\san\desktop\attemp22\attemp22\source.cpp(42): warning C4309: 'initializing': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(90): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(123): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(97): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(134): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(124): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(135): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(126): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(137): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(127): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(138): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(128): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(139): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(213): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(239): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(224): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(254): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(240): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(255): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(241): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(256): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(242): warning C4390: ';': empty controlled statement found; is this the intent?
-c:\users\san\desktop\attemp22\attemp22\source.cpp(242): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(257): warning C4390: ';': empty controlled statement found; is this the intent?
+c:\users\san\desktop\attemp22\attemp22\source.cpp(257): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(570): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(605): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(770): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(805): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(606): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(806): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(608): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(808): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(609): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(809): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(610): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(810): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(611): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(811): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(612): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(812): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(837): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(867): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(881): warning C4018: '<': signed/unsigned mismatch
-c:\users\san\desktop\attemp22\attemp22\source.cpp(915): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(941): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1001): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1043): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1073): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1087): warning C4018: '<': signed/unsigned mismatch
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1121): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1147): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(944): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1148): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1150): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1201): warning C4552: '+': operator has no effect; expected operator with side-effect
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1207): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1208): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1220): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1162): warning C4101: 'j': unreferenced local variable
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1271): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1231): warning C4101: 'flag': unreferenced local variable
   attemp22.vcxproj -> C:\Users\San\Desktop\attemp22\Debug\attemp22.exe
   attemp22.vcxproj -> C:\Users\San\Desktop\attemp22\Debug\attemp22.pdb (Full PDB)

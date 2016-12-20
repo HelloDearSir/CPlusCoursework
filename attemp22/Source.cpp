@@ -3,15 +3,15 @@
 #include<conio.h>
 #include<iostream>
 #include <time.h>
-#include <windows.h> 
+#include <windows.h>
 #include <cstdlib>
 #include <mmsystem.h>
 #include <ctime>
 #include <string>
+#include <math.h> 
 
 #define rnd()    (((FLOAT)rand())/RAND_MAX)//random number generator 
-
-
+#define RUNS 1000
 #define srand
 #define ESC 27
 
@@ -49,7 +49,12 @@ void AnimationMenu(void);
 void  Instructionanmenu(void);
 void mario(int, int);
 void AnimationM(void);
-void link(void);
+void link(int,int);
+void mario2(int, int);
+void summonpokemon(void);//this will use space to flip
+ 
+void pokeball(int,int);
+void om(void);
 
 
 void mathsmenu(void);
@@ -57,9 +62,11 @@ int fib();
 int Caeser();
 char ceasar(char m );
 void CaserCiperHistory(void);
-void primemenu(void);
 void InstructionMa(void);
 void gameoflife(void);
+void primemenu(void);
+void sieveofEratosthenes(void);
+void bruteforcep(void); 
 
 int a[80][25];//arrays for GoL
 int d[80][25];//Arrays For GoL
@@ -103,15 +110,19 @@ void main(void)
 			textcolor(11);
 			gotoxy(15, 6);
 			cout << "Press (2) To Go OnTo The AnimationMenu .\n ";
-			textcolor(12);
+			textcolor(14);
 			gotoxy(15, 7);
 			cout << "Press (3) To Go OnTo The MathsMenu.\n  ";
+			textcolor(15);
 			gotoxy(15, 8);
-			cout << "Press (4) How many prime numbers between 3 - 10,000.\n  ";
+			cout << "Press (4)To See A Magic Trick.\n  ";
+			textcolor(11); 
 			gotoxy(15, 9);
 			cout << "Press (5) To see a magic trick.\n  ";
+			textcolor(14); 
 			gotoxy(15, 10);
 			cout << "Press (Esc) To exit the program.\n";
+			textcolor(15); 
 			gotoxy(15, 11);
 			cout << "Enter 1, 2 , 3, 4, 5  or 6 -";
 			choice = _getch();
@@ -211,35 +222,39 @@ void AnimationMenu(void)
 		do
 		{
 			b = 219;
-			hline(5, 2, 11, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
-			hline(5, 13, 11, 67);
-			vline(5, 3, 11, 10);
-			vline(71, 3, 11, 10);  // Right side 
+			hline(5, 2, 12, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
+			hline(5, 13, 12, 67);
+			vline(5, 3, 12, 10);
+			vline(71, 3, 12, 10);  // Right side 
 
 			textcolor(15);
 
 			gotoxy(15, 4);
 			cout << "Welcome to Program .\n";
-			textcolor(13);
+			textcolor(14);
 			gotoxy(15, 5);
-			cout << "Press (m) To use mario .\n";
+			cout << "Press (M) To use mario .\n";
 			textcolor(11);
 			gotoxy(15, 6);
-			cout << "Press (p) To use pikachu  .\n ";
-			textcolor(12);
+			cout << "Press (P) To use pikachu  .\n ";
+			textcolor(13);
 			gotoxy(15, 7);
-			cout << "Press (l) To use Link  .\n  ";
-			textcolor(12);
+			cout << "Press (L) To use Link  .\n  ";
+			textcolor(15);
 			gotoxy(15, 7);
-			cout << "Press (l) To use Kirby  .\n  ";
-
-			cout << "Enter m, d , l, or esc -";
+			cout << "Press (K) To use Kirby  .\n  ";
+			textcolor(14);
+			gotoxy(15, 8);
+			cout << " Press (I) To Look at the Instructions.\n ";
+			textcolor(13);
+			gotoxy(15, 9);
+			cout << "Enter M, P , L, K, I  or B -";
 			list = _getch();
 		} while (list != 'm' && list != '1' && list != 'd' &&list != '6');
 		if (list == 'I') { clrscr(); Instructionanmenu(); getch(); }
 		if (list == 'm') { clrscr(); AnimationM(); getch(); }
-		if (list == 'd') { clrscr(); link(); getch(); } //dockeykong(); getch(); }
-		if (list == '1'); {  clrscr(); main(); getch(); } //this is for the first menu 
+		if (list == 'd') { clrscr(); om(); getch(); }// getch(); } //dockeykong(); getch(); }
+		if (list == 'B'); {  clrscr(); main(); getch(); } //this is for the first menu 
 	} while (list != '6');
 
 
@@ -280,7 +295,7 @@ void Instructionanmenu(void)
 
 void AnimationM(void)
 {
-	int x = 1, y = 1;
+	int x = 1, y = 1, vt = 1, vx = 0;
 	DWORD t1, t2;
 
 
@@ -331,6 +346,18 @@ void AnimationM(void)
 			}
 			clrscr();
 			mario(x, y);
+			if (vt == 0)
+			{
+				mario(x, y);
+				vt = 1; 
+				 
+			}
+			else
+			{
+				
+				mario2(x, y);
+				vt = 0; 
+			}
 		}
 	} while (!KEY_DOWN(VK_ESCAPE));
 	clrscr();
@@ -385,7 +412,52 @@ void mario(int x, int y)
 }
 
 
-void link(void)
+void mario2(int x, int y)
+{
+	//main program start
+
+
+
+
+
+	hline(x + 0, y + 1, 10, 6); // top hat
+	hline(x + -1, y + 2, 10, 11); // bottom hat
+
+								  /* This is all the parts of the Face in yellow*/
+	hline(x + 2, y + 3, 14, 2);
+	hline(x + 5, y + 3, 14, 1);
+
+	hline(x + 1, y + 4, 14, 3);
+	hline(x + 5, y + 4, 14, 3);
+
+	hline(x + 2, y + 5, 14, 3);
+	hline(x + 6, y + 5, 14, 3);
+
+
+	hline(x + -1, y + 4, 14, 1);
+	hline(x + -1, y + 5, 14, 1);
+
+	hline(x + -1, y + 6, 14, 4);
+
+
+	hline(x + -1, y + 7, 14, 8);
+
+	/*This is the hair */
+	hline(x + -1, y + 3, 15, 3);
+
+	hline(x + -2, y + 5, 15, 1);
+
+	hline(x + 0, y + 4, 15, 1);
+
+	hline(x + 0, y + 5, 15, 2);
+
+
+	/* the tash*/
+	hline(x + 3, y + 6, 13, 6);
+	hline(x + 5, y + 5, 13, 1);
+}
+
+void link(int x, int y )
 {
 	//hat
 	hline(13, 1, 10, 10);
@@ -549,6 +621,134 @@ void link(void)
 
 
 
+ void om (void)
+	 {
+
+	 hline(12, 2, 6, 7);
+	 hline(19, 3, 6, 2);//right side of the main out line 
+	 hline(21, 4, 6, 1);//right side of the main out line 
+	 vline(22, 5, 6, 2); //right side of the main out line 
+	 vline(23, 7, 6, 5); //right side of the main outline 
+	 hline(22, 12, 6, 1); //right side of the main outline
+	 hline(20, 13, 6, 2); //right side of the main outline 
+	 hline(20, 14, 6, 1);  //right side of the main outline 
+	 hline(21, 15, 6, 1); //right side of the main outline 
+	 hline(18, 16, 6, 3); //right side of the main outline 
+	 hline(17, 15, 6, 1);  //right side of the main outline 
+	 hline(16, 17, 6, 2); //right side of the main outline 
+	 hline(15, 16, 6, 1); //right side of the main outline 
+	 hline(13, 17, 6, 2); //right side of the main outline
+	 //Left selction outline 
+	 hline(12, 16, 6, 1);//bottom middle 
+	 hline(10, 17, 6, 2); //bottom left
+	 hline(11, 15, 6, 1); 
+	 hline(7, 16, 6, 3); 
+	 hline(6, 15, 6, 2);
+	 hline(8, 14, 6, 1);
+	 hline(5, 14, 6, 1);
+	 hline(6, 13, 6, 1);
+	 
+
+	 //left top side 
+	 hline(10, 3, 6, 2);
+	 hline(9, 4, 6, 1);
+	 vline(8, 5, 6, 3);
+	 vline(7, 8, 6, 5);
+	 hline(8, 11, 6, 1);
+	 hline(9, 10, 6, 2);
+	 vline(11, 11, 6, 1); 
+	 hline(12, 12, 6, 2);
+	 hline(12, 13, 6, 1);
+	 hline(14, 11, 6, 2);
+	 hline(16, 12, 6, 1);
+	 hline(17, 13, 6, 2); 
+	 hline(17, 13, 6, 1);
+	 vline(17, 9, 6, 4);
+	 hline(18, 8, 6, 1); 
+	 vline(19, 9, 6, 2); 
+
+	 hline(6, 14, 11, 2); 
+	 hline(9, 14, 11, 6);
+	
+	 hline(7, 13, 11, 3);
+	// hline(9, 14, 11, 2);
+	 hline(8, 15, 11, 3);
+	 hline(12, 15, 11,5);
+	 hline(10, 16, 11, 3);
+ 
+	 hline(13, 16, 11, 2);
+	 hline(16, 16, 11, 2);
+	 hline(18, 15, 11, 3);
+	 hline(17, 14, 11, 4);
+
+	 //shell
+	 hline(12, 3, 14, 7);
+	 hline(9, 4, 14, 12);
+	 hline(9, 5, 14, 13);
+	 hline(9, 6, 14, 13);
+	 hline(9, 7, 14, 14);
+	 hline(8, 8, 14, 10);
+	 hline(8, 9, 14, 9);
+	 hline(8, 10, 14, 1);
+	 hline(11, 10, 14, 6);
+	 hline(12, 11, 14, 3);
+	 hline(16, 11, 14, 1);
+	 hline(19, 8, 14, 4);
+	 hline(20, 9, 14, 3);
+	 hline(20, 10, 14, 3);
+	 hline(19, 11, 14, 4);
+	 vline(18, 9, 14, 4);
+	 hline(19, 12, 14, 3);
+ }
+
+
+ void summonpokemon(void)
+ {
+
+ }
+ void pokeball(int x, int y)//int x, int y)
+
+ {
+	 hline(10, 1, 11, 4);  //out line of the ball
+	 hline(10, 2, 12, 4); // red part for the ball
+	 hline(8, 2, 11, 2);
+	 hline(14, 2, 11, 2);
+	 vline(7, 3, 11, 2);//left side of the ball 
+	 vline(16, 3, 11, 2); //right side of the ball
+	 vline(6, 5, 11, 2);
+	 vline(5, 7, 11, 4); 
+	 vline(6, 11, 11, 2);
+	 hline(6, 9, 11, 1); // middle part 
+	 hline(7, 10, 11, 3);//middle part 
+	 hline(9, 9, 11, 1);//middle part
+	 hline(10, 8, 11, 3);//middle part 
+	 hline(10, 11, 11, 3); //middle part 
+	 hline(13, 9, 11, 1);//middle part 
+	 hline(13, 10, 11, 4);//middle part 
+	 hline(17, 9, 11, 1);// middle part 
+
+	 hline(8, 3, 12, 8);//ball colour 
+	 hline(8, 4, 12, 8); //ball colour
+	 hline(7, 5, 12, 10);//ball colour
+	 hline(7, 6, 12, 10); //ball colour 
+	 hline(6, 7, 12, 12);//ball colour 
+	 hline(6, 8, 12, 4);//ball colour
+	 hline(7, 9, 12, 2);//ball colour 
+	 hline(12, 8, 12, 6);//ball colour 
+	 hline(15, 9, 12, 2);//ball colour 
+
+
+
+	 hline(7, 13, 11, 2);
+	 hline(9, 14, 11,6); //base 
+	 vline(17, 5, 11, 2);
+	 vline(18, 7, 11, 4);
+
+	 //vline(19, , 11, 4);
+	 vline(17, 11, 11, 2);
+	 hline(15, 13, 11, 2);
+ }
+
 void mathsmenu()
 {
 
@@ -568,10 +768,10 @@ do
 
 {
 b = 219;
-hline(5, 2, 11, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
-hline(5, 13, 11, 67);
-vline(5, 3, 11, 10);
-vline(71, 3, 11, 10);  // Right side
+hline(5, 1, 14, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
+hline(5, 13, 14, 67);
+vline(5, 2, 14, 11);
+vline(71, 2, 14, 11);  // Right side
 
 textcolor(15);
 
@@ -580,10 +780,10 @@ cout << "Welcome to Math Menu  .\n";
 textcolor(13);
 gotoxy(15, 4);
 cout << "Press (1) To look at the instructions.\n";
-textcolor(11);
+textcolor(13);
 gotoxy(15, 5);
 cout << "Press (P) To Use see The Prime numbers .\n ";
-textcolor(12);
+textcolor(14);
 gotoxy(15, 6);
 cout << "Press (F) To Use The Fibonacci .\n  ";
 gotoxy(15, 7);
@@ -798,7 +998,12 @@ void gameoflife(void)//main program start
 int fib()
 {
 
-	hline(1, 1, 14, 10);
+	b = 219;
+	hline(5, 2, 11, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
+	hline(5, 13, 11, 67);
+	vline(5, 3, 11, 10);
+	vline(71, 3, 11, 10);  // Right side 
+	
 
 	gotoxy(15, 4);
 	int answer, position;
@@ -806,13 +1011,14 @@ int fib()
 	cout << "Which position? ";
 	cin >> position;
 	cout << endl;
-	gotoxy(19, 7);
+	gotoxy(15, 6);
 	answer = fib(position);
 	cout << answer << " is the ";
 	cout << position << "th Fibonacci number. " << endl;
 	return 0;
-	while (!KEY_DOWN(VK_ESCAPE));
-	clrscr(); 
+	clrscr();
+		while (!KEY_DOWN(VK_ESCAPE));
+	
 }
 
 int fib(int n)
@@ -938,8 +1144,8 @@ void primemenu()
 		}
 	while (list != '1'&& list != '2' && list != 'b' && list != '6');
 
-	if (list == '1') { clrscr(); Instruction(); getch(); }
-	if (list == '2') { clrscr(); } //Primemenu(); getch(); }
+	if (list == '1') { clrscr(); bruteforcep(); getch(); }
+	if (list == '2') { clrscr();  sieveofEratosthenes(); getch(); }
 	//{clrscr();  cout << "hey"; getch(); }
 	if (list == 'b') { clrscr(); main(); getch(); }
 	
@@ -951,15 +1157,133 @@ clrscr();
 
 
 
-void bruteforcep()
+void bruteforcep(void)
 {
+	int i, j, k;
+	int flag;
 
+	DWORD starttime, endtime;
+	float totaltime;
+
+	starttime = GetTickCount();//get start time
+	for (k = 0; k < RUNS; k++) //This allows have 1000 runs 
+	{
+	for (i = 3; i < 100000; i++)
+	{
+		flag = 0;
+
+		//{ 
+
+			//for (j = 3; j < i; j++)
+				//if (fmod((float)i, (float)j) == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
+
+			//if (flag == 0)
+			//{
+				//c++;
+				//cout << i << " is prime!\n";
+			//}
+			//if (flag == 1)
+			//{
+				//cout << i << " is not prime!\n";
+			//}
+	}
 
 }
+		// Including not prime and prime = 613.125
+		//Without is not prime = 509.781 seconds
+		// without is not prime and prime = 0.234 and running 10000 times 
+		//Without is prime = 536.688
 
-void sieveofEratosthenes()
+		c = 0;//reset c  
+	// this will now run for 10000. 
+		for (i = 0; i < 100000; i++)
+		{
+			if (flag == 0)  + c++;
+		}
+
+	
+	endtime = GetTickCount();//get finish time
+						 //calc time
+	totaltime = ((float)endtime - (float)starttime) / 1000.0;//calculate total time in secs
+	b = 219;
+	hline(5, 5, 14, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
+	hline(5, 14, 14, 67);
+	vline(5, 5, 14, 10);
+	vline(71, 5, 14, 10);  // Right side
+ 
+	gotoxy(15, 8);
+	std::cout << "Totaltime=" << totaltime << " sec\n";
+	gotoxy(15, 9);
+	std::cout << "primes found " << c << endl;
+	gotoxy(15, 10);
+	std::printf("Press any key to end....where's the any key?"); 
+	getch();
+while (!KEY_DOWN(VK_ESCAPE)) clrscr(); 
+ }
+	
+		
+
+
+
+void sieveofEratosthenes(void)
 {
+	//long i,j;
+	int flag; 
+	//int c=0;
+	char x[100000];
+	int i, j, k, c = 0;
 
+	DWORD starttime, endtime;
+	float totaltime;
+
+	
+	for (k = 0; k <RUNS; k++) //This allows
+	{
+
+starttime = GetTickCount();//get start time
+		for (i = 0; i<100000; i++) x[i] = 0;//0=prime, 1=not prime
+
+
+
+		x[0] = 1; //set 0 to not prime
+		x[1] = 1;//set 1 to not prime
+
+		for (i = 2; i<316; i++)
+		{
+
+			if (x[i] == 0)//if prime
+			{
+				for (j = i * 2; j<100000; j = j + i)x[j] = 1;
+			}
+		}
+
+		c = 0;//reset c
+		for (i = 0; i<100000; i++)
+		{
+			if (x[i] == 0) c++;
+		}
+
+	
+	}//end of K runs loop
+
+	endtime = GetTickCount();//get finish time
+							 //calc time
+	totaltime = ((float)endtime - (float)starttime) / (1000.0*RUNS);//calculate total time in secs
+	hline(5, 5, 14, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
+	hline(5, 14, 14, 67);
+	vline(5, 5, 14, 10);
+	vline(71, 5, 14, 10);  // Right side
+
+	gotoxy(15, 8);
+	std::cout << "Totaltime=" << totaltime << " sec\n";
+	gotoxy(15, 9);
+	std::cout << "primes found " << c << endl;
+	gotoxy(15, 10);
+	std::printf("Press any key to end....where's the any key?");
+	getchar();
+	
+	while (!KEY_DOWN(VK_ESCAPE)) clrscr();
+	
 }
 
 
