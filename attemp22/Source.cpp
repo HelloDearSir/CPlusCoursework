@@ -49,12 +49,12 @@ void AnimationMenu(void);
 void  Instructionanmenu(void);
 void mario(int, int);
 void AnimationM(void);
-void link(int,int);
+void link(void);
 void mario2(int, int);
-void summonpokemon(void);//this will use space to flip
+void AnimationP(void);//this will use space to flip
  
 void pokeball(int,int);
-void om(void);
+void om(int,int );
 
 
 void mathsmenu(void);
@@ -236,24 +236,27 @@ void AnimationMenu(void)
 			cout << "Press (M) To use mario .\n";
 			textcolor(11);
 			gotoxy(15, 6);
-			cout << "Press (P) To use pikachu  .\n ";
+			cout << "Press (P) To use Pokemon  .\n ";
 			textcolor(13);
 			gotoxy(15, 7);
 			cout << "Press (L) To use Link  .\n  ";
 			textcolor(15);
 			gotoxy(15, 7);
 			cout << "Press (K) To use Kirby  .\n  ";
-			textcolor(14);
+			textcolor(15);
 			gotoxy(15, 8);
 			cout << " Press (I) To Look at the Instructions.\n ";
-			textcolor(13);
+			textcolor(15);
 			gotoxy(15, 9);
+			cout << "Press(B) To Go Back To Main Menu Please "; 
+			textcolor(15);
+			gotoxy(15, 10);
 			cout << "Enter M, P , L, K, I  or B -";
 			list = _getch();
-		} while (list != 'm' && list != '1' && list != 'd' &&list != '6');
+		} while (list != 'm' && list != 'B' && list != 'P' &&list != '6'&&list != 'B');
 		if (list == 'I') { clrscr(); Instructionanmenu(); getch(); }
 		if (list == 'm') { clrscr(); AnimationM(); getch(); }
-		if (list == 'd') { clrscr(); om(); getch(); }// getch(); } //dockeykong(); getch(); }
+		if (list == 'P') { clrscr();  AnimationP(); getch(); }// getch(); } //dockeykong(); getch(); }
 		if (list == 'B'); {  clrscr(); main(); getch(); } //this is for the first menu 
 	} while (list != '6');
 
@@ -280,7 +283,7 @@ void Instructionanmenu(void)
 	cout << "While Using The Animations To Move Them Use The Arrows Keys.\n";
 	textcolor(14);
 	gotoxy(10, 6);
-	cout << "To Switch The Animations Please Press Space Bar.\n  ";
+	cout << "For Pokemon  Animations Please Press Space Bar To switch from ball and pokemon.\n  ";
 	textcolor(13);
 	gotoxy(10, 7);
 	cout << "To Return To The Animation Menu Press B.\n  ";
@@ -312,12 +315,12 @@ void AnimationM(void)
 
 			if (KEY_DOWN(VK_DOWN))
 			{ // If the key down is vk_down...
-				y++; // ... incriment up y
+				y++; //  incriment up y
 			}
 
 			if (KEY_DOWN(VK_LEFT))
 			{ // If the key down is vk_left...
-				x--; // ... incriment down x
+				x--; //  incriment down x
 			}
 
 			if (KEY_DOWN(VK_RIGHT))
@@ -325,14 +328,14 @@ void AnimationM(void)
 				x++; // ... incriment up x
 			}
 
-			if (x > 110)
-			{ // if x is greater than 110...
-				x = 110; // ... set x to 110
+			if (x > 80)
+			{ // if x is greater than 80
+				x = 80; //  set x to 80
 			}
 
-			if (y > 15)
-			{ // if y is greater than 15...
-				y = 15; // ... set y to 15
+			if (y > 25)
+			{ // if y is greater than 25
+				y = 25; // set y to 25
 			}
 
 			if (x < 1)
@@ -457,171 +460,215 @@ void mario2(int x, int y)
 	hline(x + 5, y + 5, 13, 1);
 }
 
-void link(int x, int y )
+
+void AnimationP(void)
 {
-	//hat
-	hline(13, 1, 10, 10);
-	hline(12, 2, 10, 12);
-	hline(11, 3, 10, 14);
-	hline(10, 4, 10, 16);
-	hline(10, 5, 10, 1);
-	hline(25, 5, 10, 1);
-
-	//hood 
-	hline(14, 7, 10, 2);
-	hline(20, 7, 10, 2);
+	int x = 1, y = 1, vt = 1, vx = 0;
+	DWORD t1, t2;
 
 
-	hline(11, 5, 6, 14);
-	hline(10, 6, 6, 16);
-	hline(10, 7, 6, 2);
-	hline(10, 8, 6, 2);
+	t1 = GetTickCount(); // Checks the PC time
+	do { // Next, set up a while loop that only ends when key_pressed is ESC
+		t2 = GetTickCount(); // Checks the PC time
+		if (t2 - t1 > 100)
+		{
+			clrscr(); 
+			//pokeball(x, y);
+			if (KEY_DOWN(VK_SPACE)) vt = !vt;
+			t1 = t2;
+ 
+			if (vt == 1)
+			{
+				pokeball(x, y);
+				//vt = 1;
 
-	hline(10, 8, 6, 2);
+			}
+			else
+			{
+				clrscr(); 
+				om(x, y);
+				//vt = 0;
 
-	hline(24, 7, 6, 2);
-	hline(24, 8, 6, 2);
-
-
-	hline(14, 8, 14, 2); //eyes 
-	hline(20, 8, 14, 2); //eyes 
-
-
-						 //face #
-
-	vline(16, 7, 6, 3);
-	vline(17, 7, 6, 3);
-	vline(18, 7, 6, 3);
-	vline(19, 7, 6, 3);
-	//vline(20, 10, 6, 5);
-	//vline(21, 10, 6, 4);
-	//vline(22, 8, 6, 5); 
-	//vline(23, 8, 6, 5);
-
-	hline(12, 7, 7, 2);
-	hline(12, 8, 7, 2);
-	hline(9, 9, 7, 18);
-	hline(10, 10, 7, 6);
-	//hline(10, 11, 7, 6);
-	hline(11, 11, 7, 5);
-	hline(14, 12, 7, 11);
-	hline(16, 13, 7, 4);
-	hline(20, 12, 7, 5);
-	hline(20, 10, 7, 6);
-	hline(20, 11, 7, 5);
-	hline(22, 7, 7, 2);
-	hline(22, 8, 7, 2);
-	/* This selection is the ears */
-	vline(7, 4, 7, 4);
-	vline(8, 5, 7, 4);
-	vline(9, 6, 7, 4);
-
-	vline(28, 4, 7, 4);
-	vline(27, 5, 7, 4);
-	vline(26, 6, 7, 4);
-
-	hline(28, 7, 11, 1);
-	hline(27, 8, 11, 2);
-	hline(26, 9, 11, 3);
-	hline(26, 10, 11, 3);
-	hline(26, 11, 11, 3);
-
-	hline(26, 12, 15, 3);
-	hline(26, 13, 15, 3);
-	hline(26, 14, 15, 2);
-
-	//mouth 
-	hline(16, 10, 6, 4);
-	hline(16, 11, 6, 4);
-
-	//top 
-	hline(9, 10, 10, 1);
-	hline(9, 11, 10, 2);
-	hline(25, 11, 10, 1);
-	hline(20, 12, 10, 6);
-	hline(20, 13, 10, 6);
-	hline(19, 14, 10, 6);
-	hline(20, 15, 10, 5);
-	hline(21, 16, 10, 4);
-
-	hline(18, 16, 10, 1);
-	hline(18, 17, 10, 2);
-	hline(18, 18, 10, 2);
-	hline(21, 19, 10, 6);
-	hline(25, 17, 10, 2);
-	hline(25, 18, 10, 2);
-	hline(19, 20, 10, 8);
-	hline(19, 21, 10, 8);
-	hline(18, 22, 10, 4);
-	hline(18, 19, 10, 1);
-	/*Shield*/
-
-	hline(6, 12, 6, 8);
-	hline(5, 13, 6, 11);
-	hline(4, 14, 6, 5);
-	hline(4, 15, 6, 5);
-	hline(4, 16, 6, 2);
-	hline(14, 16, 6, 3);
-	hline(11, 17, 6, 6);
-	hline(11, 18, 6, 6);
-	hline(11, 19, 6, 6);
-	hline(11, 20, 6, 6);
-	hline(4, 17, 6, 5);
-	hline(4, 18, 6, 5);
-	hline(4, 19, 6, 5);
-	hline(4, 20, 6, 5);
-	hline(4, 21, 6, 13);
-	hline(4, 22, 6, 12);
-	hline(6, 23, 6, 9);
-
-
-	hline(11, 14, 6, 8);
-	hline(11, 15, 6, 6);
-
-
-	hline(19, 14, 10, 6);
-
-	/*belt*/
-	hline(18, 15, 6, 2);
-	hline(19, 19, 6, 2);
-	//hline(17, 20, 6, 2);
-	hline(18, 20, 6, 2);
-	hline(18, 21, 6, 1);
-	hline(19, 16, 6, 2);
-	hline(20, 17, 6, 5);
-	hline(20, 18, 6, 5);
-	hline(25, 16, 6, 2);
-	hline(25, 15, 6, 2);
-	hline(25, 14, 6, 1);
-
-	//gap
-	hline(17, 15, 13, 1);
-	hline(17, 16, 13, 1);
-	hline(17, 17, 13, 1);
-	hline(17, 18, 13, 1);
-	hline(17, 19, 13, 1);
-	hline(17, 20, 13, 1);
-	hline(17, 20, 13, 1);
-	hline(17, 21, 13, 1);
-	hline(16, 22, 13, 1);
-	hline(15, 23, 13, 1);
-	hline(7, 24, 13, 8);
-	//shoe
-	hline(25, 21, 6, 2);
-	hline(22, 22, 6, 5);
-	hline(22, 23, 6, 5);
-	hline(22, 24, 6, 5);
-	hline(22, 25, 6, 5);
-
-	//hline(22, 17, 6, 2);
-	//hline(23, 17, 6, 2);
+			}
+		}
+		
+	} while (!KEY_DOWN(VK_ESCAPE));
+	clrscr();
 }
 
+ 
+
+
+ 
+
+	
+		
+
+	 void link(void)
+	 {
+		 //hat
+		 hline(13, 1, 10, 10);
+		 hline(12, 2, 10, 12);
+		 hline(11, 3, 10, 14);
+		 hline(10, 4, 10, 16);
+		 hline(10, 5, 10, 1);
+		 hline(25, 5, 10, 1);
+
+		 //hood 
+		 hline(14, 7, 10, 2);
+		 hline(20, 7, 10, 2);
+
+
+		 hline(11, 5, 6, 14);
+		 hline(10, 6, 6, 16);
+		 hline(10, 7, 6, 2);
+		 hline(10, 8, 6, 2);
+
+		 hline(10, 8, 6, 2);
+
+		 hline(24, 7, 6, 2);
+		 hline(24, 8, 6, 2);
+
+
+		 hline(14, 8, 14, 2); //eyes 
+		 hline(20, 8, 14, 2); //eyes 
+
+
+							  //face #
+
+		 vline(16, 7, 6, 3);
+		 vline(17, 7, 6, 3);
+		 vline(18, 7, 6, 3);
+		 vline(19, 7, 6, 3);
+		 //vline(20, 10, 6, 5);
+		 //vline(21, 10, 6, 4);
+		 //vline(22, 8, 6, 5); 
+		 //vline(23, 8, 6, 5);
+
+		 hline(12, 7, 7, 2);
+		 hline(12, 8, 7, 2);
+		 hline(9, 9, 7, 18);
+		 hline(10, 10, 7, 6);
+		 //hline(10, 11, 7, 6);
+		 hline(11, 11, 7, 5);
+		 hline(14, 12, 7, 11);
+		 hline(16, 13, 7, 4);
+		 hline(20, 12, 7, 5);
+		 hline(20, 10, 7, 6);
+		 hline(20, 11, 7, 5);
+		 hline(22, 7, 7, 2);
+		 hline(22, 8, 7, 2);
+		 /* This selection is the ears */
+		 vline(7, 4, 7, 4);
+		 vline(8, 5, 7, 4);
+		 vline(9, 6, 7, 4);
+
+		 vline(28, 4, 7, 4);
+		 vline(27, 5, 7, 4);
+		 vline(26, 6, 7, 4);
+
+		 hline(28, 7, 11, 1);
+		 hline(27, 8, 11, 2);
+		 hline(26, 9, 11, 3);
+		 hline(26, 10, 11, 3);
+		 hline(26, 11, 11, 3);
+
+		 hline(26, 12, 15, 3);
+		 hline(26, 13, 15, 3);
+		 hline(26, 14, 15, 2);
+
+		 //mouth 
+		 hline(16, 10, 6, 4);
+		 hline(16, 11, 6, 4);
+
+		 //top 
+		 hline(9, 10, 10, 1);
+		 hline(9, 11, 10, 2);
+		 hline(25, 11, 10, 1);
+		 hline(20, 12, 10, 6);
+		 hline(20, 13, 10, 6);
+		 hline(19, 14, 10, 6);
+		 hline(20, 15, 10, 5);
+		 hline(21, 16, 10, 4);
+
+		 hline(18, 16, 10, 1);
+		 hline(18, 17, 10, 2);
+		 hline(18, 18, 10, 2);
+		 hline(21, 19, 10, 6);
+		 hline(25, 17, 10, 2);
+		 hline(25, 18, 10, 2);
+		 hline(19, 20, 10, 8);
+		 hline(19, 21, 10, 8);
+		 hline(18, 22, 10, 4);
+		 hline(18, 19, 10, 1);
+		 /*Shield*/
+
+		 hline(6, 12, 6, 8);
+		 hline(5, 13, 6, 11);
+		 hline(4, 14, 6, 5);
+		 hline(4, 15, 6, 5);
+		 hline(4, 16, 6, 2);
+		 hline(14, 16, 6, 3);
+		 hline(11, 17, 6, 6);
+		 hline(11, 18, 6, 6);
+		 hline(11, 19, 6, 6);
+		 hline(11, 20, 6, 6);
+		 hline(4, 17, 6, 5);
+		 hline(4, 18, 6, 5);
+		 hline(4, 19, 6, 5);
+		 hline(4, 20, 6, 5);
+		 hline(4, 21, 6, 13);
+		 hline(4, 22, 6, 12);
+		 hline(6, 23, 6, 9);
+
+
+		 hline(11, 14, 6, 8);
+		 hline(11, 15, 6, 6);
+
+
+		 hline(19, 14, 10, 6);
+
+		 /*belt*/
+		 hline(18, 15, 6, 2);
+		 hline(19, 19, 6, 2);
+		 //hline(17, 20, 6, 2);
+		 hline(18, 20, 6, 2);
+		 hline(18, 21, 6, 1);
+		 hline(19, 16, 6, 2);
+		 hline(20, 17, 6, 5);
+		 hline(20, 18, 6, 5);
+		 hline(25, 16, 6, 2);
+		 hline(25, 15, 6, 2);
+		 hline(25, 14, 6, 1);
+
+		 //gap
+		 hline(17, 15, 13, 1);
+		 hline(17, 16, 13, 1);
+		 hline(17, 17, 13, 1);
+		 hline(17, 18, 13, 1);
+		 hline(17, 19, 13, 1);
+		 hline(17, 20, 13, 1);
+		 hline(17, 20, 13, 1);
+		 hline(17, 21, 13, 1);
+		 hline(16, 22, 13, 1);
+		 hline(15, 23, 13, 1);
+		 hline(7, 24, 13, 8);
+		 //shoe
+		 hline(25, 21, 6, 2);
+		 hline(22, 22, 6, 5);
+		 hline(22, 23, 6, 5);
+		 hline(22, 24, 6, 5);
+		 hline(22, 25, 6, 5);
+	 } 
+
+			
+		 
 
 
 
 
- void om (void)
+
+ void om (int x ,int y )
 	 {
 
 	 hline(12, 2, 6, 7);
@@ -702,10 +749,7 @@ void link(int x, int y )
  }
 
 
- void summonpokemon(void)
- {
 
- }
  void pokeball(int x, int y)//int x, int y)
 
  {
@@ -1166,42 +1210,45 @@ void bruteforcep(void)
 	float totaltime;
 
 	starttime = GetTickCount();//get start time
-	for (k = 0; k < RUNS; k++) //This allows have 1000 runs 
-	{
+	//for (k = 0; k < RUNS; k++) //This allows have 1000 runs 
+	//{
 	for (i = 3; i < 100000; i++)
 	{
-		flag = 0;
 
-		//{ 
-
-			//for (j = 3; j < i; j++)
-				//if (fmod((float)i, (float)j) == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
-
-			//if (flag == 0)
-			//{
-				//c++;
-				//cout << i << " is prime!\n";
-			//}
-			//if (flag == 1)
-			//{
-				//cout << i << " is not prime!\n";
-			//}
-	}
-
-}
-		// Including not prime and prime = 613.125
-		//Without is not prime = 509.781 seconds
-		// without is not prime and prime = 0.234 and running 10000 times 
-		//Without is prime = 536.688
-
-		c = 0;//reset c  
-	// this will now run for 10000. 
-		for (i = 0; i < 100000; i++)
+		flag = 0; c++;
+		
+		 //flag == 1; 
 		{
-			if (flag == 0)  + c++;
-		}
 
-	
+			for (j = 3; j < i; j++)
+				if (fmod((float)i, (float)j) == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
+
+			/*if (flag == 0)
+			{
+			    c++;
+				cout << i << " is prime!\n";
+			}*/
+			if (flag == 1)
+			{
+				//c++; 
+				cout << j<< " is not prime!\n";
+			}
+		}
+	} 
+
+	// Including not prime and prime = 613.125
+	//Without is not prime = 455.56 seconds
+	// without is not prime and prime = 0.234 and running 10000 times 
+	//Without is prime = 536.688
+
+	//c = 0;//reset c  
+// this will now run for 10000. 
+	//for (i = 0; i < 100000; i++)
+	//{
+		//if (flag == 0) + c++;
+	//}
+
+
 	endtime = GetTickCount();//get finish time
 						 //calc time
 	totaltime = ((float)endtime - (float)starttime) / 1000.0;//calculate total time in secs
@@ -1210,16 +1257,16 @@ void bruteforcep(void)
 	hline(5, 14, 14, 67);
 	vline(5, 5, 14, 10);
 	vline(71, 5, 14, 10);  // Right side
- 
+
 	gotoxy(15, 8);
 	std::cout << "Totaltime=" << totaltime << " sec\n";
 	gotoxy(15, 9);
 	std::cout << "primes found " << c << endl;
 	gotoxy(15, 10);
-	std::printf("Press any key to end....where's the any key?"); 
+	std::printf("Press any key to end....where's the any key?");
 	getch();
-while (!KEY_DOWN(VK_ESCAPE)) clrscr(); 
- }
+	while (!KEY_DOWN(VK_ESCAPE)) clrscr();
+} 
 	
 		
 
@@ -1237,7 +1284,7 @@ void sieveofEratosthenes(void)
 	float totaltime;
 
 	
-	for (k = 0; k <RUNS; k++) //This allows
+	for (k = 0; k <RUNS; k++) //This allows to run the program for 10000 tmes 
 	{
 
 starttime = GetTickCount();//get start time
@@ -1245,19 +1292,19 @@ starttime = GetTickCount();//get start time
 
 
 
-		x[0] = 1; //set 0 to not prime
-		x[1] = 1;//set 1 to not prime
+		x[0] = 1; //This is set 0 to not prime
+		x[1] = 1;//This set 1 to not prime
 
-		for (i = 2; i<316; i++)
+		for (i = 2; i<100; i++)
 		{
 
-			if (x[i] == 0)//if prime
+			if (x[i] == 0)//if prime 
 			{
 				for (j = i * 2; j<100000; j = j + i)x[j] = 1;
 			}
 		}
 
-		c = 0;//reset c
+		c = 0;//reset c so the run can go back through the code without making the end result (prime numbers be higher) 
 		for (i = 0; i<100000; i++)
 		{
 			if (x[i] == 0) c++;
