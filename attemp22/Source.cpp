@@ -11,7 +11,7 @@
 #include <math.h> 
 
 #define rnd()    (((FLOAT)rand())/RAND_MAX)//random number generator 
-#define RUNS 1000
+#define RUNS 1000 
 #define srand
 #define ESC 27
 
@@ -21,7 +21,7 @@
 
 
 
-using namespace std;
+using namespace std; 
 
 /* functions for clear screen, gotoxy(x pont, y point) textcolor(15) changes
 color. hline(4 = x, -2 =y, 11 = color and 60 = lengh)
@@ -34,7 +34,7 @@ void textcolor(int);
 void hline(int, int, int, int);
 void vline(int, int, int, int);
 
-void randomblocks(void); 
+void randomblocks(void);
 
 
 int x = 80, y = 25, c;
@@ -52,7 +52,7 @@ void AnimationM(void);
 void link(void);
 void mario2(int, int);
 void AnimationP(void);//this will use space to flip
- 
+void Kiby(void); 
 void pokeball(int,int);
 void om(int,int );
 
@@ -172,17 +172,22 @@ void randomblocks(void)
 		gotoxy(0, 0);
 		x = 0;
 		y = 0;
-	}
+	} 
+	
 
+			
+			
+		
 
-
-	//}
-	while (!KEY_DOWN(VK_ESCAPE));
-	clrscr();
-
+		
+		//}
+		while (!KEY_DOWN(VK_ESCAPE));
+		clrscr();
+	
 }
 
-void Instruction(void) {
+void Instruction(void) 
+{
 	hline(5, 3, 11, 66); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
 	hline(6, 12, 11, 65);
 	vline(5, 3, 11, 10);
@@ -253,11 +258,13 @@ void AnimationMenu(void)
 			gotoxy(15, 10);
 			cout << "Enter M, P , L, K, I  or B -";
 			list = _getch();
-		} while (list != 'm' && list != 'B' && list != 'P' &&list != '6'&&list != 'B');
-		if (list == 'I') { clrscr(); Instructionanmenu(); getch(); }
+		} while (list != 'm' && list != 'i' && list != 'p' &&list != '6'&&list != 'b' &&list != 'k');
+		if (list == 'i') { clrscr(); Instructionanmenu(); getch(); }
 		if (list == 'm') { clrscr(); AnimationM(); getch(); }
-		if (list == 'P') { clrscr();  AnimationP(); getch(); }// getch(); } //dockeykong(); getch(); }
-		if (list == 'B'); {  clrscr(); main(); getch(); } //this is for the first menu 
+		if (list == 'p') { clrscr();  AnimationP(); getch(); }// getch(); } //dockeykong(); getch(); }
+		if (list == 'b') {  clrscr(); main(); getch(); } //this is for the first menu 
+		if (list == 'k') { clrscr(); Kiby(); getch(); }
+	
 	} while (list != '6');
 
 
@@ -661,7 +668,46 @@ void AnimationP(void)
 		 hline(22, 25, 6, 5);
 	 } 
 
-			
+	 void Kiby(void)
+	 {
+       //outline
+		 hline(10, 3, 10, 10);
+		 hline(20, 4, 10, 1); 
+		 hline(21, 5, 10, 1);
+		 hline(22, 6, 10, 2);//hunle
+		 vline(24, 7, 10, 2); //hubble
+		 hline(22, 9, 10, 2);//hubble
+		 // right foot
+		 hline(20, 8, 10, 2);
+		 vline(19, 9, 10, 2);
+		 hline(20, 11, 10, 1);
+		 vline(21, 12, 10, 7);
+		 hline(18, 15, 10, 4); 
+		 hline(17, 16, 10, 1);
+		 vline(16, 17, 10, 5);
+		 hline(15, 19, 10, 1); 
+		 hline(17, 21, 10, 2);
+		 hline(20, 19, 10, 1);
+		 hline(19, 20, 10, 1); 
+		 hline(12, 20, 10, 4);
+
+		 // left foot 
+		 hline(10, 19, 10, 2);
+		 hline(8, 17, 10, 1);
+		 hline(8, 18, 10, 2);
+		 hline(7, 19, 10, 1);
+		 hline(6, 20, 10, 1); 
+		 hline(7, 21, 10, 5); 
+		 //system("color c6"); 
+
+
+		 //left side 
+		 vline(7, 14, 10, 3);
+		 vline(6, 8, 10, 6); 
+		 hline(7, 7, 10, 2); 
+		 hline(8, 9, 10, 1); 
+		 vline(9, 4, 10, 3); 
+}
 		 
 
 
@@ -792,6 +838,18 @@ void AnimationP(void)
 	 vline(17, 11, 11, 2);
 	 hline(15, 13, 11, 2);
  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 void mathsmenu()
 {
@@ -1212,61 +1270,65 @@ void bruteforcep(void)
 	starttime = GetTickCount();//get start time
 	//for (k = 0; k < RUNS; k++) //This allows have 1000 runs 
 	//{
-	for (i = 3; i < 100000; i++)
-	{
-
-		flag = 0; c++;
-		
-		 //flag == 1; 
+		for (i = 3; i < 100000; i++)
 		{
 
-			for (j = 3; j < i; j++)
-				if (fmod((float)i, (float)j) == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
+			flag = 0; 
 
-			/*if (flag == 0)
+			 //flag == 1; 
 			{
-			    c++;
-				cout << i << " is prime!\n";
-			}*/
-			if (flag == 1)
-			{
-				//c++; 
-				cout << j<< " is not prime!\n";
+				
+				for (j = 3; j < i; j++)
+					if (fmod((float)i, (float)j) == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
+
+				if (flag == 0)
+				{
+					c++;
+					//cout << i << " is prime!\n";
+				}
+				if (flag ==1)
+				{
+					c++;
+					cout << i << " is not prime!\n";
+				}
 			}
 		}
-	} 
+		
+		// Including not prime and prime = 613.125
+		//Without is not prime = 455.56 seconds
+		// without is not prime and prime = 0.234 and running 10000 times 
+		//Without is prime = 536.688
 
-	// Including not prime and prime = 613.125
-	//Without is not prime = 455.56 seconds
-	// without is not prime and prime = 0.234 and running 10000 times 
-	//Without is prime = 536.688
+		/*c = 0;//reset c  
+	//this will now run for 10000. 
+		for (i = 0; i < 100000; i++)
+		{
+			
+		if (flag == 0) + c++;
+		}
+		*/
 
-	//c = 0;//reset c  
-// this will now run for 10000. 
-	//for (i = 0; i < 100000; i++)
-	//{
-		//if (flag == 0) + c++;
-	//}
+			endtime = GetTickCount();//get finish time
+								 //calc time
+			totaltime = ((float)endtime - (float)starttime) / 1000.0;//calculate total time in secs
+			clrscr();
+			b = 219;
+			hline(5, 5, 14, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
+			hline(5, 14, 14, 67);
+			vline(5, 5, 14, 10);
+			vline(71, 5, 14, 10);  // Right side
 
+			gotoxy(15, 8);
+			std::cout << "Totaltime=" << totaltime << " sec\n";
+			gotoxy(15, 9);
+			std::cout << "primes found " << c << endl;
+			gotoxy(15, 10);
+			std::printf("Press any key to end....where's the any key?");
+			getch();
+			while (!KEY_DOWN(VK_ESCAPE)); clrscr();
+		}
+	
 
-	endtime = GetTickCount();//get finish time
-						 //calc time
-	totaltime = ((float)endtime - (float)starttime) / 1000.0;//calculate total time in secs
-	b = 219;
-	hline(5, 5, 14, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
-	hline(5, 14, 14, 67);
-	vline(5, 5, 14, 10);
-	vline(71, 5, 14, 10);  // Right side
-
-	gotoxy(15, 8);
-	std::cout << "Totaltime=" << totaltime << " sec\n";
-	gotoxy(15, 9);
-	std::cout << "primes found " << c << endl;
-	gotoxy(15, 10);
-	std::printf("Press any key to end....where's the any key?");
-	getch();
-	while (!KEY_DOWN(VK_ESCAPE)) clrscr();
-} 
 	
 		
 
@@ -1275,7 +1337,7 @@ void bruteforcep(void)
 void sieveofEratosthenes(void)
 {
 	//long i,j;
-	int flag; 
+	int flag;
 	//int c=0;
 	char x[100000];
 	int i, j, k, c = 0;
@@ -1283,55 +1345,55 @@ void sieveofEratosthenes(void)
 	DWORD starttime, endtime;
 	float totaltime;
 
-	
-	for (k = 0; k <RUNS; k++) //This allows to run the program for 10000 tmes 
+
+	for (k = 0; k < RUNS; k++) //This allows to run the program for 10000 tmes 
 	{
 
-starttime = GetTickCount();//get start time
-		for (i = 0; i<100000; i++) x[i] = 0;//0=prime, 1=not prime
+		starttime = GetTickCount();//get start time
+		for (i = 0; i < 100000; i++) x[i] = 0;//0=prime, 1=not prime
 
 
 
 		x[0] = 1; //This is set 0 to not prime
 		x[1] = 1;//This set 1 to not prime
 
-		for (i = 2; i<100; i++)
+		for (i = 2; i < 316; i++)
 		{
 
 			if (x[i] == 0)//if prime 
 			{
-				for (j = i * 2; j<100000; j = j + i)x[j] = 1;
+				for (j = i * 2; j < 100000; j = j + i)x[j] = 1;
 			}
 		}
 
 		c = 0;//reset c so the run can go back through the code without making the end result (prime numbers be higher) 
-		for (i = 0; i<100000; i++)
+		for (i = 0; i < 100000; i++)
 		{
 			if (x[i] == 0) c++;
 		}
 
-	
-	}//end of K runs loop
 
-	endtime = GetTickCount();//get finish time
-							 //calc time
-	totaltime = ((float)endtime - (float)starttime) / (1000.0*RUNS);//calculate total time in secs
-	hline(5, 5, 14, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
-	hline(5, 14, 14, 67);
-	vline(5, 5, 14, 10);
-	vline(71, 5, 14, 10);  // Right side
+		//end of K runs loop //time 0.001172
 
-	gotoxy(15, 8);
-	std::cout << "Totaltime=" << totaltime << " sec\n";
-	gotoxy(15, 9);
-	std::cout << "primes found " << c << endl;
-	gotoxy(15, 10);
-	std::printf("Press any key to end....where's the any key?");
-	getchar();
-	
-	while (!KEY_DOWN(VK_ESCAPE)) clrscr();
-	
+		endtime = GetTickCount();//get finish time
+								 //calc time
+		totaltime = ((float)endtime - (float)starttime) / (1000.0*RUNS);//calculate total time in secs
+
+
+
+		std::cout << "Totaltime=" << totaltime << " sec\n";
+
+		std::cout << "primes found " << c << endl;
+
+		std::printf("Press any key to end....where's the any key?");
+		getchar();
+
+		while (!KEY_DOWN(VK_ESCAPE)) clrscr();
+
+
+	}
 }
+
 
 
 
