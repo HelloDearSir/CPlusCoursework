@@ -52,10 +52,10 @@ void AnimationM(void);
 void link(void);
 void mario2(int, int);
 void AnimationP(void);//this will use space to flip
-void Kiby(void); 
+void Kiby(int,int); 
 void pokeball(int,int);
 void om(int,int );
-
+void animationK(void);
 
 void mathsmenu(void);
 int fib(); 
@@ -263,7 +263,7 @@ void AnimationMenu(void)
 		if (list == 'm') { clrscr(); AnimationM(); getch(); }
 		if (list == 'p') { clrscr();  AnimationP(); getch(); }// getch(); } //dockeykong(); getch(); }
 		if (list == 'b') {  clrscr(); main(); getch(); } //this is for the first menu 
-		if (list == 'k') { clrscr(); Kiby(); getch(); }
+		if (list == 'k') { clrscr(); animationK(); getch(); }
 	
 	} while (list != '6');
 
@@ -668,45 +668,161 @@ void AnimationP(void)
 		 hline(22, 25, 6, 5);
 	 } 
 
-	 void Kiby(void)
+
+	 void animationK(void)
+	 {
+		 int x = 1, y = 1;
+		 DWORD t1, t2;
+
+
+		 t1 = GetTickCount(); // Checks the PC time
+		 do { // Next, set up a while loop that only ends when key_pressed is ESC
+			 t2 = GetTickCount(); // Checks the PC time
+			 if (t2 - t1 > 50)
+			 { // If t2 take t1 are less than onehundred...
+				 t1 = t2; // ... make T1 the same as T2 and continue
+				 if (KEY_DOWN(VK_UP))
+				 { // If the key down is vk_up...
+					 y--; // ... incriment down y
+				 }
+
+				 if (KEY_DOWN(VK_DOWN))
+				 { // If the key down is vk_down...
+					 y++; // ... incriment up y
+				 }
+
+				 if (KEY_DOWN(VK_LEFT))
+				 { // If the key down is vk_left...
+					 x--; // ... incriment down x
+				 }
+
+				 if (KEY_DOWN(VK_RIGHT))
+				 { // If the key down is vk_right...
+					 x++; // ... incriment up x
+				 }
+
+				 if (x > 80)
+				 { // if x is greater than 110...
+					 x = 80; // ... set x to 110
+				 }
+
+				 if (y > 25)
+				 { // if y is greater than 15...
+					 y = 25; // ... set y to 15
+				 }
+
+				 if (x < 1)
+				 { // if x is less than 1...
+					 x = 1; // ... set x to 1
+				 }
+
+				 if (y < 1)
+				 { // if y is less than 1...
+					 y = 1; // ... set y to 1
+				 }
+				 clrscr();
+				 Kiby(x, y);
+			 }
+		 } while (!KEY_DOWN(VK_ESCAPE)); clrscr(); 
+	 } 
+
+	 void Kiby(int x ,int y  )
 	 {
        //outline
-		 hline(10, 3, 10, 10);
-		 hline(20, 4, 10, 1); 
-		 hline(21, 5, 10, 1);
-		 hline(22, 6, 10, 2);//hunle
-		 vline(24, 7, 10, 2); //hubble
-		 hline(22, 9, 10, 2);//hubble
-		 // right foot
-		 hline(20, 8, 10, 2);
-		 vline(19, 9, 10, 2);
-		 hline(20, 11, 10, 1);
-		 vline(21, 12, 10, 7);
-		 hline(18, 15, 10, 4); 
-		 hline(17, 16, 10, 1);
-		 vline(16, 17, 10, 5);
-		 hline(15, 19, 10, 1); 
-		 hline(17, 21, 10, 2);
-		 hline(20, 19, 10, 1);
-		 hline(19, 20, 10, 1); 
-		 hline(12, 20, 10, 4);
+		 hline(x +10, y+3, 10, 10);
+		 hline(x+20, y+4, 10, 1); 
+		 hline(x+21, y+5, 10, 1);
+		 hline(x+22, y+6, 10, 2);//hunle
+		 vline(x+24, y+7, 10, 2); //hubble
+		 hline(x+22, y+9, 10, 2);//hubble
 
+		 //inside the  hat thing 
+		 hline(x+10, y+4, 12, 10);
+		 hline(x+ 10, y+5, 12, 11);
+		 hline(x+9, y+5, 12, 12);
+		 hline(x+9, y+6, 12, 13);
+		 //hline(17, 6, 15, 3);
+		 hline(x+11, y+7, 15, 7);
+		 hline(x+18, y+7, 12, 4);
+		 hline(x+18, y+8, 12, 2); 
+		 hline(x+17, y+8, 15, 1);
+
+		 //pinkish bosy 
+		 hline(x+8, y+7, 13, 3); 
+		 hline(x+6, y + 8, 13, 11);
+		 hline(x+7, y + 9, 13, 1);
+		 hline(x+9, y + 9, 13, 6);
+		hline(x+16, y + 9, 13, 4);
+		hline(x+7, y + 10, 13, 6);
+		hline(x+7, y + 11, 13, 6);
+		hline(x+7, y + 12, 13, 4);
+		hline(x+7, y + 13, 13, 7);
+		hline(x+15, y + 13, 13, 6);
+		hline(x+16, y + 11, 13, 4);
+		hline(x+16, y + 10, 13, 3);
+		hline(x+18, y + 12, 13, 4);
+		hline(x+15, y + 14, 13, 6);
+		hline(x+8, y + 14, 13, 6);
+		vline(x+14, y + 10, 13, 2);
+		hline(x+13, y+12, 13, 3);
+		 //eys 
+		 vline(13, y + 9, 10, 3);
+		 vline(15, y + 9, 10, 3);
+		 // bottom half 
+		 hline(7, y + 15, 13, 11);
+		 hline(7, y + 16, 13, 10);
+		 hline(8, y + 17, 13, 9);
+		 hline(9, y + 18, 13, 8);
+		 hline(11, y + 19, 13, 4);
+		 //mouths 
+		 vline(14, y + 13, 10, 2);
+		 //cheeks
+		 hline(x + 11, y + 12, 12, 2);
+		 hline(x + 16, y + 12, 12, 2);
+
+		 // right foot
+		 hline(x + 20, y + 8, 10, 2);
+		 vline(x + 19, y + 9, 10, 2);
+		 hline(x + 20, y + 11, 10, 1);
+		 vline(x + 21, y + 12, 10, 7);
+		 hline(x + 18, y + 15, 10, 4);
+		 hline(x + 17, y + 16, 10, 1);
+		 vline(x + 16, y + 17, 10, 5);
+		 hline(x + 15, y + 19, 10, 1);
+		 hline(x + 17, y + 21, 10, 2);
+		 hline(x + 20, y + 19, 10, 1);
+		 hline(x + 19, y + 20, 10, 1);
+		 hline(x + 12, y + 20, 10, 4);
+		 //inside the foot
+		 hline(x + 18, y + 16, 13, 3);
+		 hline(x + 17, y + 17, 13, 4);
+		 hline(x + 17, y + 18, 13, 4);
+		 hline(x + 17, y + 19, 13, 3);
+		 hline(x + 17, y + 20, 13, 2);
+		
+		 /// inside of the foot
+		 hline(x + 8, y + 19, 13, 2);
+		 hline(x + 7, y + 20, 13, 5);
+
+		 
 		 // left foot 
-		 hline(10, 19, 10, 2);
-		 hline(8, 17, 10, 1);
-		 hline(8, 18, 10, 2);
-		 hline(7, 19, 10, 1);
-		 hline(6, 20, 10, 1); 
-		 hline(7, 21, 10, 5); 
+		 hline(x + 10, y + 19, 10, 2);
+		 hline(x + 8, y + 17, 10, 1);
+		 hline(x + 8, y + 18, 10, 2);
+		 hline(x + 7, y + 19, 10, 1);
+		 hline(x + 6, y + 20, 10, 1);
+		 hline(x + 7, y + 21, 10, 5);
 		 //system("color c6"); 
 
 
 		 //left side 
-		 vline(7, 14, 10, 3);
-		 vline(6, 8, 10, 6); 
-		 hline(7, 7, 10, 2); 
-		 hline(8, 9, 10, 1); 
-		 vline(9, 4, 10, 3); 
+		 vline(x + 7, y + 14, 10, 3);
+		 vline(x + 6, y + 8, 10, 6);
+		 hline(x + 7, y + 7, 10, 2);
+		 hline(x + 8, y + 9, 10, 1);
+		 vline( x + 9, y + 4, 10, 3);
+
+
 }
 		 
 
@@ -1284,12 +1400,12 @@ void bruteforcep(void)
 				if (flag == 0)
 				{
 					c++;
-					//cout << i << " is prime!\n";
+				cout << i << " is prime!\n";
 				}
 				if (flag ==1)
 				{
-					c++;
-					cout << i << " is not prime!\n";
+					//c++;
+					//cout << i << " is not prime!\n";
 				}
 			}
 		}

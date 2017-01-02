@@ -1,17 +1,41 @@
 ﻿  Source.cpp
-c:\users\san\desktop\attemp22\attemp22\source.cpp(42): warning C4309: 'initializing': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(97): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(41): warning C4309: 'initializing': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(96): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(105): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(108): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(111): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(114): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(117): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(120): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(123): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(126): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(133): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
 c:\users\san\desktop\attemp22\attemp22\source.cpp(134): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(135): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(136): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
 c:\users\san\desktop\attemp22\attemp22\source.cpp(137): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
 c:\users\san\desktop\attemp22\attemp22\source.cpp(138): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(139): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(165): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(200): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(203): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(206): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(209): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(212): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(228): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(237): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(240): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(243): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(246): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(249): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(252): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(255): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(258): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(261): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(229): warning C4309: '=': truncation of constant value
 c:\users\san\desktop\attemp22\attemp22\source.cpp(262): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
 c:\users\san\desktop\attemp22\attemp22\source.cpp(263): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
@@ -20,40 +44,113 @@ c:\users\san\desktop\attemp22\attemp22\source.cpp(264): warning C4996: 'getch': 
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
 c:\users\san\desktop\attemp22\attemp22\source.cpp(265): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(266): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(286): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(289): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(292): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(295): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(726): error C2059: syntax error: '}'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(987): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(996): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(999): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1002): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1005): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1007): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1009): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1011): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1013): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1015): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1022): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(872): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(907): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1023): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(908): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1025): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(910): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1026): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(911): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1027): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(912): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1028): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(913): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1029): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(914): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1052): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1055): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1058): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1061): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1064): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1097): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1218): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1228): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1229): error C2065: 'cin': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1230): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1230): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1233): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1234): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1234): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1260): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1267): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1267): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1270): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1270): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1272): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1272): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1274): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1274): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1276): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1276): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1278): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1278): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1280): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1280): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1287): error C2065: 'string': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1287): error C2146: syntax error: missing ';' before identifier 'input'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1287): error C2065: 'input': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1290): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1296): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1296): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1298): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1298): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1300): error C2065: 'cin': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1300): error C2065: 'input': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1300): error C3861: 'getline': identifier not found
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1302): error C2065: 'string': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1302): error C2146: syntax error: missing ';' before identifier 'output'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1302): error C2065: 'output': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1304): error C2065: 'input': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1304): error C2228: left of '.length' must have class/struct/union
+  c:\users\san\desktop\attemp22\attemp22\source.cpp(1304): note: type is 'unknown-type'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1306): error C2065: 'output': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1306): error C2065: 'input': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1309): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1309): error C2065: 'output': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1309): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1312): error C2065: 'input': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1312): error C2228: left of '.length' must have class/struct/union
+  c:\users\san\desktop\attemp22\attemp22\source.cpp(1312): note: type is 'unknown-type'
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1338): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1347): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1350): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1353): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1355): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1357): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1359): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1364): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1103): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1145): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1175): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1189): warning C4018: '<': signed/unsigned mismatch
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1223): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1249): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1365): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1250): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1367): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1252): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1402): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1428): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1430): warning C4309: '=': truncation of constant value
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1437): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1439): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1439): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1442): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1313): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1315): warning C4309: '=': truncation of constant value
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1327): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1264): warning C4101: 'k': unreferenced local variable
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1380): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\san\desktop\attemp22\attemp22\source.cpp(1340): warning C4101: 'flag': unreferenced local variable
-  attemp22.vcxproj -> C:\Users\San\Desktop\attemp22\Debug\attemp22.exe
-  attemp22.vcxproj -> C:\Users\San\Desktop\attemp22\Debug\attemp22.pdb (Full PDB)
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1495): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1499): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1501): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1501): error C2065: 'endl': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1527): error C2065: 'cout': undeclared identifier
+c:\users\san\desktop\attemp22\attemp22\source.cpp(1538): error C2065: 'cout': undeclared identifier
