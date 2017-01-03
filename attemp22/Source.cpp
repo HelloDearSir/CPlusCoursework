@@ -1,5 +1,3 @@
-
-
 #include<conio.h>
 #include<iostream>
 #include <time.h>
@@ -11,7 +9,7 @@
 #include <math.h> 
 
 #define rnd()    (((FLOAT)rand())/RAND_MAX)//random number generator 
-#define RUNS 1000 
+#define RUNS 1 
 #define srand
 #define ESC 27
 
@@ -26,7 +24,6 @@ using namespace std;
 /* functions for clear screen, gotoxy(x pont, y point) textcolor(15) changes
 color. hline(4 = x, -2 =y, 11 = color and 60 = lengh)
 void vline(4 = x, -2 =y, 11 = color and 60 = lengh);
-
 */
 void clrscr(void);
 void gotoxy(int, int);
@@ -1384,9 +1381,10 @@ void bruteforcep(void)
 	float totaltime;
 
 	starttime = GetTickCount();//get start time
-	//for (k = 0; k < RUNS; k++) //This allows have 1000 runs 
-	//{
-		for (i = 3; i < 100000; i++)
+	for (k = 0; k < RUNS; k++) //This allows have 1000 runs 
+	{
+		//for (i = 3; i < 100000; i++)
+		for (i = 3; i < 100000; i+=2)
 		{
 
 			flag = 0; 
@@ -1394,40 +1392,59 @@ void bruteforcep(void)
 			 //flag == 1; 
 			{
 				
-				for (j = 3; j < i; j++)
-					if (fmod((float)i, (float)j) == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
+				//for (j = 3; j < i; j++)
+				for (j = 3; j < i; j+=2)
+					//if (fmod((float)i, (float)j) == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
+				    if (i%j == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
 
 				if (flag == 0)
 				{
 					c++;
-				cout << i << " is prime!\n";
+				//cout << i << " is prime!\n";
 				}
 				if (flag ==1)
 				{
+					//bang out of calculation
+					j=i;
 					//c++;
 					//cout << i << " is not prime!\n";
 				}
-			}
+			} 
 		}
 		
 		// Including not prime and prime = 613.125
 		//Without is not prime = 455.56 seconds
 		// without is not prime and prime = 0.234 and running 10000 times 
 		//Without is prime = 536.688
+		//if (i%j == 0) (flag = 1); //if modding int i and j together = 0, it is not a prime number.
 
-		/*c = 0;//reset c  
+				/*if (flag == 0)
+				{
+					c++;
+				//cout << i << " is prime!\n";
+				}
+				if (flag ==1)
+				{
+					//bang out of calculation
+					j=i;
+					//c++;
+					//cout << i << " is not prime!\n";
+				 /*  3.9 seconds 
+
+		/*
+		c = 0;//reset c  
 	//this will now run for 10000. 
 		for (i = 0; i < 100000; i++)
 		{
 			
-		if (flag == 0) + c++;
+		if (flag == 0)  c++;
 		}
-		*/
-
+	    */
+		
 			endtime = GetTickCount();//get finish time
 								 //calc time
 			totaltime = ((float)endtime - (float)starttime) / 1000.0;//calculate total time in secs
-			clrscr();
+		
 			b = 219;
 			hline(5, 5, 14, 67); // (4 = x, -2 =y, 11 = color and 60 = lengh)1
 			hline(5, 14, 14, 67);
@@ -1444,8 +1461,8 @@ void bruteforcep(void)
 			while (!KEY_DOWN(VK_ESCAPE)); clrscr();
 		}
 	
+}
 
-	
 		
 
 
