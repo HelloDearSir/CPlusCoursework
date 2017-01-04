@@ -9,7 +9,7 @@
 #include <math.h> 
 
 #define rnd()    (((FLOAT)rand())/RAND_MAX)//random number generator 
-#define RUNS 1 
+#define RUNS 10000 
 #define srand
 #define ESC 27
 
