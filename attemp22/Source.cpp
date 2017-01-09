@@ -16,7 +16,11 @@
 #include <math.h> 
 
 #define rnd()    (((FLOAT)rand())/RAND_MAX)//random number generator 
+<<<<<<< HEAD
 #define RUNS 1000 
+=======
+#define RUNS 10000 
+>>>>>>> origin/master
 #define srand
 #define ESC 27
 
